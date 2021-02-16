@@ -1,12 +1,14 @@
 import "normalize.css";
 import PageHeader from "./Header";
+import Map from "./Map";
 import { Helmet } from "react-helmet";
-import React, { useRef, useEffect } from "react";
-import styled from "styled-components";
+import React from "react";
+import GlobalStyle from "./styles/GlobalStyle";
 
 const App = () => {
   return (
     <div className="App">
+      <GlobalStyle />
       <Helmet>
         <link
           href="https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css"
@@ -15,6 +17,7 @@ const App = () => {
       </Helmet>
 
       <PageHeader />
+      <Map />
     </div>
   );
 };

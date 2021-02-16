@@ -13,6 +13,10 @@ const NoStyleInput = styled.input`
   outline: none;
 `;
 
+const InputForm = styled.form`
+  margin: 0 auto;
+`;
+
 const CityInput = styled(NoStyleInput)`
   border: 2px solid #a8dadc;
   border-radius: 8px 0px 0px 8px;
@@ -34,17 +38,16 @@ const SubmitInput = styled(NoStyleInput)`
   padding: 16px;
 
   background: #a8dadc;
-
 `;
 
 const PageHeader = () => {
   return (
     <Header>
-      <form>
+      <InputForm>
         <CityInput type="text" placeholder="Enter city name..." />
         <NumDaysInput type="number" min="1" placeholder="# of Days" />
         <SubmitInput type="submit" value="Make Plans" />
-      </form>
+      </InputForm>
     </Header>
   );
 };
