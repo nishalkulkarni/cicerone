@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import "normalize.css";
+import PageHeader from "./Header";
+import { Helmet } from "react-helmet";
+import React, { useRef, useEffect } from "react";
+import styled from "styled-components";
 
-function App() {
+const App = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Helmet>
+        <link
+          href="https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css"
+          rel="stylesheet"
+        />
+      </Helmet>
+
+      <PageHeader />
     </div>
   );
-}
+};
 
 export default App;
